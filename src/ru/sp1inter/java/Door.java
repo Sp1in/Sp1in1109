@@ -6,7 +6,6 @@ public class Door {
     private String color;
     private int height;
 
-
     public String getName() {
         return name;
     }
