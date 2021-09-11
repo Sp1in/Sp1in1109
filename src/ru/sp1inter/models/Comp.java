@@ -1,4 +1,4 @@
-package ru.sp1inter.app;
+package ru.sp1inter.models;
 
 public class Comp {
 

@@ -1,11 +1,10 @@
-package ru.sp1inter.java;
+package ru.sp1inter.models;
 
-public class Car {
+public class Door {
 
     private String name;
     private String color;
     private int height;
-
 
     public String getName() {
         return name;
