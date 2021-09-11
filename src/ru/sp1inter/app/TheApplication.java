@@ -8,23 +8,27 @@ public class TheApplication {
         /* создать переменную dell с размером 2000 */
         Comp dell = new Comp("dell", 2000);
         /* вывести результат команды 1 */
-        Comp comp1 = findBiggestComp(dell,acer);
+        Comp comp1 = findBiggestComp(dell, acer);
         System.out.println("Result 1:" + comp1.getName());
         /* вывести результат команды 2 */
-        Comp comp2 = findSmalledComp(dell,acer);
+        Comp comp2 = findSmalledComp(dell, acer);
         System.out.println("Result 2:" + comp2.getName());
         /* вывести результат команды 3 */
-        String comp3 = findSmalledCompName(dell,acer);
+        String comp3 = findSmalledCompName(dell, acer);
         System.out.println("Result 3:" + comp3);
         /* вывести результат команды 4 */
-        String comp4 = findBiggestCompName(dell,acer);
+        String comp4 = findBiggestCompName(dell, acer);
         System.out.println("Result 4:" + comp4);
         /* вывести результат команды 5 */
-        int comp5 = findSmalledCompSize(dell,acer);
+        int comp5 = findSmalledCompSize(dell, acer);
         System.out.println("Result 5:" + comp5);
         /* вывести результат команды 6 */
-        int comp6 = findBiggestCompSize(dell,acer);
+        int comp6 = findBiggestCompSize(dell, acer);
         System.out.println("Result 6:" + comp6);
+        /* вывести результат команды 7 */
+        System.out.println("Result 7 before " + dell.getDiscSize());
+        increaseCompDiskSize(dell, 5);
+        System.out.println("Result 7 after " + dell.getDiscSize());
     }
 
 
@@ -76,6 +80,13 @@ public class TheApplication {
         Comp biggetComp = findBiggestComp(a, b);
         int size = biggetComp.getDiscSize();
         return size;
+    }
+
+    /* метод должен увеличивать diskSize у Comp на n, и устанавливать новое значение */
+    public void increaseCompDiskSize(Comp a, int n) {
+        int diskSize = a.getDiscSize();
+        int compNewDiskSize = diskSize + n;
+        a.setDiscSize(compNewDiskSize);
     }
 
 }
